@@ -1,6 +1,11 @@
-import { css } from 'react-emotion';
+import { css } from 'react-emotion'
 
-export const cssWrapper = css({ padding: 8, margin: '16px 0px', border: '1px solid #000' });
+export const cssWrapper = css({
+  padding: 8,
+  margin: '16px 0px',
+  border: '1px solid #000',
+  backgroundColor: 'white',
+})
 
 export const cssModalRight = css({
   display: 'flex',
@@ -14,4 +19,4 @@ export const cssModalRight = css({
     border: 'none',
     outline: 'none',
   },
-});
+})
