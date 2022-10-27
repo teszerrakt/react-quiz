@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import { DataContext } from "./DataContext";
+import { useContext } from 'react'
+import { DataContext } from '../../common/DataContext'
 
 const Input = () => {
-  const {query, handleSearch, handleQueryChange} = useContext(DataContext)
+  const { query, handleSearch, handleQueryChange } = useContext(DataContext)
 
   return (
     <form
@@ -11,10 +11,15 @@ const Input = () => {
         handleSearch()
       }}
     >
-      <input type="text" placeholder="search" value={query} onChange={handleQueryChange}/>
+      <input
+        type="text"
+        placeholder="search"
+        value={query}
+        onChange={handleQueryChange}
+      />
       <button type="submit">🔍</button>
     </form>
   )
 }
 
-export default Input;
+export default Input
