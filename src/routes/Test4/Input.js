@@ -1,8 +1,17 @@
+import { useContext } from "react";
+import { DataContext } from "./DataContext";
 
 const Input = () => {
+  const {query, handleSearch, handleQueryChange} = useContext(DataContext)
+
   return (
-    <form>
-      <input type="text" placeholder="search" />
+    <form
+      onSubmit={(event) => {
+        event.preventDefault()
+        handleSearch()
+      }}
+    >
+      <input type="text" placeholder="search" value={query} onChange={handleQueryChange}/>
       <button type="submit">🔍</button>
     </form>
   )
