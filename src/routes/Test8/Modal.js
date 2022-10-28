@@ -1,17 +1,19 @@
-import { cssModal } from "./style"
+import { cssModal, modalOverlay } from './style'
 
-const Modal = () => {
+const Modal = ({ formValues, onReset }) => {
   return (
-    <div className={cssModal}>
-      Name: _____
-      <br/>
-      Age: _____
-      <br/>
-      Address: _____
-      <br/>
-      <button>Reset</button>
+    <div className={modalOverlay}>
+      <div className={cssModal}>
+        Name: {formValues.name}
+        <br />
+        Age: {formValues.age}
+        <br />
+        Address: {formValues.address}
+        <br />
+        <button onClick={onReset}>Reset</button>
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default Modal;
+export default Modal

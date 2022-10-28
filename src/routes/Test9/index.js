@@ -1,6 +1,9 @@
-import Solar from "./Solar";
+import { useState } from 'react'
+import Solar from './Solar'
 
 const Test9 = () => {
+  const [planetNumber, setPlanetNumber] = useState(3)
+
   return (
     <>
       <ul>
@@ -9,10 +12,15 @@ const Test9 = () => {
         <li>The color of each planet must be unique</li>
         <li>More far the planet = more time it's revolves</li>
       </ul>
-      <input type="text" placeholder="number of planet"/>
-      <Solar/>
+      <input
+        type="text"
+        placeholder="number of planet"
+        value={planetNumber}
+        onChange={(event) => setPlanetNumber(+event.target.value)}
+      />
+      <Solar planetNumber={planetNumber} />
     </>
   )
 }
 
-export default Test9;
+export default Test9
