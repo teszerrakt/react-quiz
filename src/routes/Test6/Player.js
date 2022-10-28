@@ -72,7 +72,7 @@ const Player = () => {
             {isPlaying ? <span>⏸ PAUSE</span> : <span>▶️ PLAY</span>}
           </button>
           <button type="button" onClick={handleMute}>
-            {isMuted ? <span>🔈 UNMUTE</span> : <span>🔈 MUTE</span>}
+            {isMuted ? <span>🔈 UNMUTE</span> : <span>🔇 MUTE</span>}
           </button>
         </div>
         <input
